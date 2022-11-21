@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, url_for
-from Streckeninformationssystem.app import app
-from Streckeninformationssystem.app.forms import LoginForm
+from Strecken.app import app
+from Strecken.app.forms import LoginForm
 
 
 @app.route('/')
