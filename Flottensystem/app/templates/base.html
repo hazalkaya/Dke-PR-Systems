@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Flotteninformationssystem</title>
+      {% else %}
+      <title>Welcome to Flotteninformationssystem</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+        Flotteninformationssystem:
+        <a href="{{ url_for('index') }}">Home</a>
+
+        <a href="{{ url_for('login') }}">Login</a>
+
+    </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
