@@ -2,16 +2,17 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Microblog</title>
+        <title>{{ title }} - Streckeninformationssystem</title>
         {% else %}
-        <title>Welcome to Microblog</title>
+        <title>Welcome to Streckeninformationssystem</title>
         {% endif %}
     </head>
     <body>
         <div>
-            Microblog:
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
+            Streckeninformationssystem:
+            <a class="nav-item nav-link" id="home" href="/">Home</a>
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <a class="nav-item nav-link" id="bahnhof" href="/bahnhöfe">Bahnhof</a>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
