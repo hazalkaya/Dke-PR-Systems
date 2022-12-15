@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block title %}bahnhof{% endblock %}
+{% block title %}abschnitt{% endblock %}
 {% block content %}
-    <h1 class="py-5">Bahnhöfe</h1>
+    <h1 class="py-5">Abschnitt</h1>
         <form method="POST">
           <br />
           <div class="form-group">
-            <label for="ts_name">neuer Bahnhof:</label></br>
+            <label for="ts_name">neuer Abschnitt:</label></br>
             <input
               type="text"
               class="form-control"
@@ -29,10 +29,10 @@
         </form>
     <hr />
     <u1 class="list-group list-group-flush" id="trainstation-list">
-        {% for ts in bahnhöfe %}
+        {% for ts in abschnitt %}
             <li class="list-group-item">
                 <li>
-                    <span class="field-name">Bahnhof:</span>
+                    <span class="field-name">Abschnitt:</span>
                     <span class="field-value">{{ ts.name }}</span>
                 </li>
                 <li>
@@ -43,7 +43,7 @@
                            class="btn btn-primary btn-lg-active"
                            role="button" aria-pressed="true">BEARBEITEN |
                         </a>
-                        <a href="/delete_b/{{ ts.id }}"
+                        <a href="/delete_Bahnhöfe/{{ ts.id }}"
                            class="btn btn-primary btn-lg-active"
                            role="button" aria-pressed="true">LÖSCHEN
                         </a>

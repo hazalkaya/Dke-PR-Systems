@@ -43,3 +43,25 @@ class TrainstationSchema(marsh.SQLAlchemyAutoSchema):
 bahnhofSchema = TrainstationSchema()
 bahnhöfeSchema = TrainstationSchema(many=True)
 
+class Abschnitt(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(60), nullable=False)
+    spurweite = db.Column(db.Integer, nullable=False)
+    maxGeschwindigkeit = db.Column(db.Integer, nullable=False)
+    länge = db.Column(db.Integer, nullable=False)
+
+    def __repr__(self):
+        return f"Abschnitt(name {self.name}, spurweite {self.spurweite}, maxGeschwindigkeit {self.maxGeschwindigkeit}, länge {self.länge})"
+
+
+class AbschnittSchema(marsh.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Bahnhof
+        ordered = True
+        fields = (
+            "id",
+            "name",
+            "spurweite",
+            "maxGeschwindigkeit",
+            "länge"
+        )
